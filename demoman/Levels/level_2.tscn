@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://ek4wk6xba15u"]
+
+[ext_resource type="Texture2D" uid="uid://ck5lcvqkv3hfd" path="res://Assets/BG_DesertMountains/backyback.jpeg" id="1_dgq3b"]
+[ext_resource type="PackedScene" uid="uid://bxp5k5hrf8yhb" path="res://Ambientes/cobertura.tscn" id="1_kbe2v"]
+[ext_resource type="PackedScene" uid="uid://c0bwm30hmy0j2" path="res://Ambientes/límites.tscn" id="2_arsda"]
+[ext_resource type="PackedScene" uid="uid://7cvbc8enflwi" path="res://Personaje/space_shooter.tscn" id="2_kbe2v"]
+[ext_resource type="PackedScene" uid="uid://b8st208bgnx67" path="res://Personaje/ufos.tscn" id="5_bcgyv"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Backyback" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(1.92, 1.9115)
+texture = ExtResource("1_dgq3b")
+
+[node name="Plataformas" type="Node2D" parent="."]
+
+[node name="Cobertura" parent="Plataformas" instance=ExtResource("1_kbe2v")]
+position = Vector2(1504, 864)
+scale = Vector2(2.5, 2.5)
+
+[node name="Cobertura2" parent="Plataformas" instance=ExtResource("1_kbe2v")]
+position = Vector2(960, 864)
+scale = Vector2(2.5, 2.5)
+
+[node name="Cobertura3" parent="Plataformas" instance=ExtResource("1_kbe2v")]
+position = Vector2(416, 864)
+scale = Vector2(2.5, 2.5)
+
+[node name="Límites" parent="Plataformas" instance=ExtResource("2_arsda")]
+
+[node name="Personajes" type="Node2D" parent="."]
+
+[node name="UFOs" parent="Personajes" instance=ExtResource("5_bcgyv")]
+position = Vector2(1424, 264)
+
+[node name="UFOs2" parent="Personajes" instance=ExtResource("5_bcgyv")]
+position = Vector2(480, 264)
+
+[node name="SpaceShooter" parent="Personajes" instance=ExtResource("2_kbe2v")]
+position = Vector2(1000, 1000)
+scale = Vector2(1.6, 1.6)
+
+[node name="LogicaAPelo" type="Node2D" parent="."]
+visible = false

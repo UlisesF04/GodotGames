@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bm0p1kvxcopa2"]
+
+[ext_resource type="Texture2D" uid="uid://3d344m0ljosd" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_top.png" id="1_flt00"]
+[ext_resource type="Texture2D" uid="uid://b6k3wadvrkuua" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_castle.png" id="2_oss6p"]
+[ext_resource type="Texture2D" uid="uid://daculv05xtjfc" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile.png" id="3_g2ytu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_juyba"]
+size = Vector2(58, 218.5)
+
+[node name="Torre" type="StaticBody2D"]
+
+[node name="TileTop" type="Sprite2D" parent="."]
+position = Vector2(13, 23)
+texture = ExtResource("1_flt00")
+
+[node name="TileCastle" type="Sprite2D" parent="."]
+position = Vector2(13, -28)
+texture = ExtResource("2_oss6p")
+
+[node name="Tile" type="Sprite2D" parent="."]
+position = Vector2(13, 83)
+texture = ExtResource("3_g2ytu")
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(13, 143)
+texture = ExtResource("3_g2ytu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(13, 62.75)
+shape = SubResource("RectangleShape2D_juyba")

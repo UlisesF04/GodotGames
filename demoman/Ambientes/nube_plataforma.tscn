@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgy2mct4cfetp"]
+
+[ext_resource type="Texture2D" uid="uid://cb7ubnbreame8" path="res://Assets/kenney_scribble-platformer/PNG/Default/background_cloudA.png" id="1_30b84"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hf4cm"]
+radius = 15.0
+height = 124.0
+
+[node name="cloud_platform" type="StaticBody2D"]
+rotation = 1.5708
+
+[node name="BackgroundCloudA2" type="Sprite2D" parent="."]
+position = Vector2(13, -1.90735e-06)
+rotation = 1.5708
+texture = ExtResource("1_30b84")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-4.54747e-13, 0)
+shape = SubResource("CapsuleShape2D_hf4cm")

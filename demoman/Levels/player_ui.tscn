@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://glodut7vb80t"]
+
+[ext_resource type="Script" uid="uid://c42u31uqse175" path="res://Levels/player_ui.gd" id="1_hfp02"]
+[ext_resource type="Texture2D" uid="uid://1go71co8soaa" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_heart.png" id="1_i4ltp"]
+[ext_resource type="FontFile" uid="uid://ckjnwdyjcuv2b" path="res://Fonts/PressStart2P-Regular.ttf" id="2_1rt11"]
+[ext_resource type="Texture2D" uid="uid://ba36jg6sefro8" path="res://Assets/kenney_scribble-platformer/PNG/Default/ui_select.png" id="3_d2yl1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hfp02"]
+specular_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2yl1"]
+font = ExtResource("2_1rt11")
+font_size = 30
+outline_size = 2
+outline_color = Color(0.581033, 0.581033, 0.581033, 1)
+
+[node name="Player_UI" type="CanvasLayer"]
+script = ExtResource("1_hfp02")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 320.0
+offset_bottom = 192.0
+texture = SubResource("CanvasTexture_hfp02")
+
+[node name="Label" type="Label" parent="TextureRect"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 16.0
+offset_right = 74.0
+offset_bottom = 65.0
+grow_horizontal = 2
+text = "VIDAS"
+label_settings = SubResource("LabelSettings_d2yl1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -112.0
+offset_right = 148.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 35
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_i4ltp")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_i4ltp")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect/HBoxContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_i4ltp")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 328.0
+offset_bottom = 192.0
+texture = ExtResource("3_d2yl1")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://5t7yxx4xvmqc"]
+
+[ext_resource type="Texture2D" uid="uid://bdqlpb76uxgxu" path="res://Assets/kenney_scribble-platformer/PNG/Default/ui_circle.png" id="1_diaro"]
+[ext_resource type="Script" uid="uid://ld5odb03soq0" path="res://Objetos/barrilogica.gd" id="1_ol8rc"]
+[ext_resource type="Texture2D" uid="uid://3h0ugjkl8qo5" path="res://Assets/kenney_shape-characters/PNG/Default/red_body_circle.png" id="3_w7cbm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ol8rc"]
+radius = 29.0
+height = 58.0
+
+[node name="Barril" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 3
+gravity_scale = 1.2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_ol8rc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_diaro")
+
+[node name="RedBodyCircle" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_w7cbm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ol8rc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

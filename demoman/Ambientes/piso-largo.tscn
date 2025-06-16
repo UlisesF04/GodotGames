@@ -1,0 +1,137 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwilston1xkck"]
+
+[ext_resource type="Texture2D" uid="uid://cv1ri2k7uajj3" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_column.png" id="1_qcra2"]
+[ext_resource type="Texture2D" uid="uid://bbon1v2id1ryd" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_bridge.png" id="2_ijadu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwxvm"]
+size = Vector2(481.75, 16)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="TileColumn" type="Sprite2D" parent="."]
+position = Vector2(-116.5, 47)
+scale = Vector2(1.26562, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn2" type="Sprite2D" parent="."]
+position = Vector2(-37.75, 47)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn3" type="Sprite2D" parent="."]
+position = Vector2(43, 47)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn4" type="Sprite2D" parent="."]
+position = Vector2(124, 47)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn5" type="Sprite2D" parent="."]
+position = Vector2(207, 47)
+scale = Vector2(1.33984, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn6" type="Sprite2D" parent="."]
+position = Vector2(288, 47)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileBridge" type="Sprite2D" parent="."]
+position = Vector2(-116, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge2" type="Sprite2D" parent="."]
+position = Vector2(-37, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge3" type="Sprite2D" parent="."]
+position = Vector2(43, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge4" type="Sprite2D" parent="."]
+position = Vector2(124, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge5" type="Sprite2D" parent="."]
+position = Vector2(206, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge6" type="Sprite2D" parent="."]
+position = Vector2(287, 50)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(86, 31.5)
+shape = SubResource("RectangleShape2D_dwxvm")
+
+[node name="TileColumn7" type="Sprite2D" parent="."]
+position = Vector2(365.5, 47.5)
+scale = Vector2(1.26562, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn8" type="Sprite2D" parent="."]
+position = Vector2(444.25, 47.5)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn9" type="Sprite2D" parent="."]
+position = Vector2(525, 47.5)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn10" type="Sprite2D" parent="."]
+position = Vector2(606, 47.5)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn11" type="Sprite2D" parent="."]
+position = Vector2(689, 47.5)
+scale = Vector2(1.33984, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileColumn12" type="Sprite2D" parent="."]
+position = Vector2(770, 47.5)
+scale = Vector2(1.30469, 0.71875)
+texture = ExtResource("1_qcra2")
+
+[node name="TileBridge7" type="Sprite2D" parent="."]
+position = Vector2(366, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge8" type="Sprite2D" parent="."]
+position = Vector2(445, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge9" type="Sprite2D" parent="."]
+position = Vector2(525, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge10" type="Sprite2D" parent="."]
+position = Vector2(606, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge11" type="Sprite2D" parent="."]
+position = Vector2(688, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="TileBridge12" type="Sprite2D" parent="."]
+position = Vector2(769, 50.5)
+scale = Vector2(1.34375, 1)
+texture = ExtResource("2_ijadu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(567.125, 31.5)
+shape = SubResource("RectangleShape2D_dwxvm")

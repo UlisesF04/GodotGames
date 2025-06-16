@@ -1,0 +1,143 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5d0g2p1decra"]
+
+[ext_resource type="Script" uid="uid://7jwoc8a2j2vw" path="res://Personaje/boss_logics.gd" id="1_bduay"]
+[ext_resource type="Texture2D" uid="uid://b6spda0bu22qw" path="res://Assets/kenney_shape-characters/PNG/Default/blue_body_circle.png" id="1_cbpur"]
+[ext_resource type="Texture2D" uid="uid://dhaovjt7brv0g" path="res://Assets/kenney_shape-characters/PNG/Default/face_f.png" id="2_bduay"]
+[ext_resource type="Texture2D" uid="uid://ujooe5aunpd3" path="res://Assets/kenney_shape-characters/PNG/Default/blue_hand_closed.png" id="3_jhr7f"]
+[ext_resource type="Texture2D" uid="uid://bdqlpb76uxgxu" path="res://Assets/kenney_scribble-platformer/PNG/Default/ui_circle.png" id="4_2mkuo"]
+
+[sub_resource type="Animation" id="Animation_wh0dq"]
+resource_name = "Lanzar"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlueBodyCircle/BlueHandClosed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.666667, 1.26667, 1.93333, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-41, 21), Vector2(6, 12), Vector2(94, -50), Vector2(-36, -22), Vector2(-123, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlueBodyCircle/BlueHandClosed/UiCircle:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"launch_barrel"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2inf3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlueBodyCircle/BlueHandClosed:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-41, 21)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlueBodyCircle/BlueHandClosed/UiCircle:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_trdkv"]
+resource_name = "Reposo"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlueBodyCircle/BlueHandClosed:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.6, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-43, 24), Vector2(-6, 6), Vector2(35, 30), Vector2(-22, 29)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vrseb"]
+_data = {
+&"Lanzar": SubResource("Animation_wh0dq"),
+&"RESET": SubResource("Animation_2inf3"),
+&"Reposo": SubResource("Animation_trdkv")
+}
+
+[node name="JefePrueba" type="Node2D"]
+script = ExtResource("1_bduay")
+
+[node name="BlueBodyCircle" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cbpur")
+
+[node name="FaceF" type="Sprite2D" parent="BlueBodyCircle"]
+position = Vector2(0, -3)
+texture = ExtResource("2_bduay")
+
+[node name="BlueHandClosed" type="Sprite2D" parent="BlueBodyCircle"]
+position = Vector2(-41, 21)
+rotation = -0.239076
+texture = ExtResource("3_jhr7f")
+
+[node name="UiCircle" type="Sprite2D" parent="BlueBodyCircle/BlueHandClosed"]
+visible = false
+position = Vector2(-38.1032, -4.14081)
+rotation = 0.239076
+texture = ExtResource("4_2mkuo")
+
+[node name="UiCircle" type="Sprite2D" parent="BlueBodyCircle"]
+position = Vector2(80.6676, 11.6676)
+rotation = 0.239076
+texture = ExtResource("4_2mkuo")
+
+[node name="UiCircle2" type="Sprite2D" parent="BlueBodyCircle"]
+position = Vector2(140.668, 11.6676)
+rotation = 0.239076
+texture = ExtResource("4_2mkuo")
+
+[node name="UiCircle3" type="Sprite2D" parent="BlueBodyCircle"]
+position = Vector2(112.668, -40)
+rotation = 0.239076
+texture = ExtResource("4_2mkuo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vrseb")
+}
+autoplay = "Reposo"

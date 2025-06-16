@@ -1,0 +1,461 @@
+[gd_scene load_steps=4 format=3 uid="uid://denbfivnno5a2"]
+
+[ext_resource type="Texture2D" uid="uid://dqp5p7gbmglf" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_arch.png" id="1_c0khm"]
+[ext_resource type="Texture2D" uid="uid://d3ibxn43v0lw0" path="res://Assets/kenney_scribble-platformer/PNG/Default/tile_archColumns.png" id="2_qfcb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qwof"]
+size = Vector2(737, 54)
+
+[node name="Puente_piso" type="StaticBody2D"]
+
+[node name="TileArch" type="Sprite2D" parent="."]
+position = Vector2(-177, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch2" type="Sprite2D" parent="."]
+position = Vector2(-115, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch3" type="Sprite2D" parent="."]
+position = Vector2(-54, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch4" type="Sprite2D" parent="."]
+position = Vector2(8, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch5" type="Sprite2D" parent="."]
+position = Vector2(68, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch6" type="Sprite2D" parent="."]
+position = Vector2(130, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch7" type="Sprite2D" parent="."]
+position = Vector2(192, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch8" type="Sprite2D" parent="."]
+position = Vector2(254, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch9" type="Sprite2D" parent="."]
+position = Vector2(317, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch10" type="Sprite2D" parent="."]
+position = Vector2(379, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch11" type="Sprite2D" parent="."]
+position = Vector2(440, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="TileArch12" type="Sprite2D" parent="."]
+position = Vector2(502, 25)
+texture = ExtResource("1_c0khm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(163.5, 26)
+shape = SubResource("RectangleShape2D_3qwof")
+
+[node name="TileArchColumns" type="Sprite2D" parent="."]
+position = Vector2(-177, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns2" type="Sprite2D" parent="."]
+position = Vector2(-115, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns3" type="Sprite2D" parent="."]
+position = Vector2(-53, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns4" type="Sprite2D" parent="."]
+position = Vector2(9, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns5" type="Sprite2D" parent="."]
+position = Vector2(69, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns6" type="Sprite2D" parent="."]
+position = Vector2(131, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns7" type="Sprite2D" parent="."]
+position = Vector2(192, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns8" type="Sprite2D" parent="."]
+position = Vector2(254, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns9" type="Sprite2D" parent="."]
+position = Vector2(318, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns10" type="Sprite2D" parent="."]
+position = Vector2(380, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns11" type="Sprite2D" parent="."]
+position = Vector2(441, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns12" type="Sprite2D" parent="."]
+position = Vector2(503, 84)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns13" type="Sprite2D" parent="."]
+position = Vector2(-177, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns14" type="Sprite2D" parent="."]
+position = Vector2(-115, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns15" type="Sprite2D" parent="."]
+position = Vector2(-53, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns16" type="Sprite2D" parent="."]
+position = Vector2(9, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns17" type="Sprite2D" parent="."]
+position = Vector2(69, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns18" type="Sprite2D" parent="."]
+position = Vector2(131, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns19" type="Sprite2D" parent="."]
+position = Vector2(192, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns20" type="Sprite2D" parent="."]
+position = Vector2(254, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns21" type="Sprite2D" parent="."]
+position = Vector2(318, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns22" type="Sprite2D" parent="."]
+position = Vector2(380, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns23" type="Sprite2D" parent="."]
+position = Vector2(441, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns24" type="Sprite2D" parent="."]
+position = Vector2(503, 145)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns25" type="Sprite2D" parent="."]
+position = Vector2(-177, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns26" type="Sprite2D" parent="."]
+position = Vector2(-115, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns27" type="Sprite2D" parent="."]
+position = Vector2(-53, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns28" type="Sprite2D" parent="."]
+position = Vector2(9, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns29" type="Sprite2D" parent="."]
+position = Vector2(69, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns30" type="Sprite2D" parent="."]
+position = Vector2(131, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns31" type="Sprite2D" parent="."]
+position = Vector2(192, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns32" type="Sprite2D" parent="."]
+position = Vector2(254, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns33" type="Sprite2D" parent="."]
+position = Vector2(318, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns34" type="Sprite2D" parent="."]
+position = Vector2(380, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns35" type="Sprite2D" parent="."]
+position = Vector2(441, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns36" type="Sprite2D" parent="."]
+position = Vector2(503, 206)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns37" type="Sprite2D" parent="."]
+position = Vector2(-177, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns38" type="Sprite2D" parent="."]
+position = Vector2(-115, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns39" type="Sprite2D" parent="."]
+position = Vector2(-53, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns40" type="Sprite2D" parent="."]
+position = Vector2(9, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns41" type="Sprite2D" parent="."]
+position = Vector2(69, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns42" type="Sprite2D" parent="."]
+position = Vector2(131, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns43" type="Sprite2D" parent="."]
+position = Vector2(192, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns44" type="Sprite2D" parent="."]
+position = Vector2(254, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns45" type="Sprite2D" parent="."]
+position = Vector2(318, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns46" type="Sprite2D" parent="."]
+position = Vector2(380, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns47" type="Sprite2D" parent="."]
+position = Vector2(441, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns48" type="Sprite2D" parent="."]
+position = Vector2(503, 267)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns49" type="Sprite2D" parent="."]
+position = Vector2(-177, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns50" type="Sprite2D" parent="."]
+position = Vector2(-115, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns51" type="Sprite2D" parent="."]
+position = Vector2(-53, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns52" type="Sprite2D" parent="."]
+position = Vector2(9, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns53" type="Sprite2D" parent="."]
+position = Vector2(69, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns54" type="Sprite2D" parent="."]
+position = Vector2(131, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns55" type="Sprite2D" parent="."]
+position = Vector2(192, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns56" type="Sprite2D" parent="."]
+position = Vector2(254, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns57" type="Sprite2D" parent="."]
+position = Vector2(318, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns58" type="Sprite2D" parent="."]
+position = Vector2(380, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns59" type="Sprite2D" parent="."]
+position = Vector2(441, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns60" type="Sprite2D" parent="."]
+position = Vector2(503, 328)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns61" type="Sprite2D" parent="."]
+position = Vector2(-177, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns62" type="Sprite2D" parent="."]
+position = Vector2(-115, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns63" type="Sprite2D" parent="."]
+position = Vector2(-53, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns64" type="Sprite2D" parent="."]
+position = Vector2(9, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns65" type="Sprite2D" parent="."]
+position = Vector2(69, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns66" type="Sprite2D" parent="."]
+position = Vector2(131, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns67" type="Sprite2D" parent="."]
+position = Vector2(192, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns68" type="Sprite2D" parent="."]
+position = Vector2(254, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns69" type="Sprite2D" parent="."]
+position = Vector2(318, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns70" type="Sprite2D" parent="."]
+position = Vector2(380, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns71" type="Sprite2D" parent="."]
+position = Vector2(441, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns72" type="Sprite2D" parent="."]
+position = Vector2(503, 389)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns73" type="Sprite2D" parent="."]
+position = Vector2(-177, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns74" type="Sprite2D" parent="."]
+position = Vector2(-115, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns75" type="Sprite2D" parent="."]
+position = Vector2(-53, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns76" type="Sprite2D" parent="."]
+position = Vector2(9, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns77" type="Sprite2D" parent="."]
+position = Vector2(69, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns78" type="Sprite2D" parent="."]
+position = Vector2(131, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns79" type="Sprite2D" parent="."]
+position = Vector2(192, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns80" type="Sprite2D" parent="."]
+position = Vector2(254, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns81" type="Sprite2D" parent="."]
+position = Vector2(318, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns82" type="Sprite2D" parent="."]
+position = Vector2(380, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns83" type="Sprite2D" parent="."]
+position = Vector2(441, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns84" type="Sprite2D" parent="."]
+position = Vector2(503, 450)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns85" type="Sprite2D" parent="."]
+position = Vector2(-177, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns86" type="Sprite2D" parent="."]
+position = Vector2(-115, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns87" type="Sprite2D" parent="."]
+position = Vector2(-53, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns88" type="Sprite2D" parent="."]
+position = Vector2(9, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns89" type="Sprite2D" parent="."]
+position = Vector2(69, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns90" type="Sprite2D" parent="."]
+position = Vector2(131, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns91" type="Sprite2D" parent="."]
+position = Vector2(192, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns92" type="Sprite2D" parent="."]
+position = Vector2(254, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns93" type="Sprite2D" parent="."]
+position = Vector2(318, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns94" type="Sprite2D" parent="."]
+position = Vector2(380, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns95" type="Sprite2D" parent="."]
+position = Vector2(441, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns96" type="Sprite2D" parent="."]
+position = Vector2(503, 511)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns97" type="Sprite2D" parent="."]
+position = Vector2(318, 571)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns98" type="Sprite2D" parent="."]
+position = Vector2(380, 571)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns99" type="Sprite2D" parent="."]
+position = Vector2(441, 571)
+texture = ExtResource("2_qfcb8")
+
+[node name="TileArchColumns100" type="Sprite2D" parent="."]
+position = Vector2(503, 571)
+texture = ExtResource("2_qfcb8")

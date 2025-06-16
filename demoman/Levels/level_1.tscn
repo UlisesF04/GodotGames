@@ -1,0 +1,173 @@
+[gd_scene load_steps=17 format=3 uid="uid://bgjca580nn6rr"]
+
+[ext_resource type="PackedScene" uid="uid://bgy2mct4cfetp" path="res://Ambientes/nube_plataforma.tscn" id="4_77x7w"]
+[ext_resource type="PackedScene" uid="uid://denbfivnno5a2" path="res://Ambientes/puente_piso.tscn" id="5_77x7w"]
+[ext_resource type="Script" uid="uid://bepuv71qm470b" path="res://Personaje/SeguimientoCam.gd" id="5_rfktq"]
+[ext_resource type="PackedScene" uid="uid://b5d0g2p1decra" path="res://Personaje/jefe_prueba.tscn" id="5_syshm"]
+[ext_resource type="Texture2D" uid="uid://b10fa3xkc6sus" path="res://Assets/kenney_scribble-platformer/PNG/Default/character_handYellow.png" id="6_62b6n"]
+[ext_resource type="PackedScene" uid="uid://b1sux40j6dtm0" path="res://Personaje/pj_animado.tscn" id="6_f4pg2"]
+[ext_resource type="AudioStream" uid="uid://b5xwxxeyh2mv2" path="res://Music/Windmill Isle (Day) - Sonic Unleashed [OST].mp3" id="6_lk57d"]
+[ext_resource type="Texture2D" uid="uid://b75oxt5a875fa" path="res://Assets/kenney_shape-characters/PNG/Default/tile_cloud.png" id="7_rs4xw"]
+[ext_resource type="PackedScene" uid="uid://bm0p1kvxcopa2" path="res://Ambientes/torre.tscn" id="8_f4pg2"]
+[ext_resource type="PackedScene" uid="uid://glodut7vb80t" path="res://Levels/player_ui.tscn" id="9_f4pg2"]
+[ext_resource type="Script" uid="uid://6y3wbrjysyab" path="res://Levels/level_logic.gd" id="10_62b6n"]
+[ext_resource type="PackedScene" uid="uid://5t7yxx4xvmqc" path="res://Objetos/barril.tscn" id="14_2hkqn"]
+[ext_resource type="PackedScene" uid="uid://cta2p10xvv7gu" path="res://UI/dialogos.tscn" id="15_34erp"]
+[ext_resource type="PackedScene" uid="uid://dq02pwk2ke4ud" path="res://Ambientes/back1.tscn" id="16_c7pbv"]
+[ext_resource type="PackedScene" uid="uid://bwilston1xkck" path="res://Ambientes/piso-largo.tscn" id="16_k2bse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4pg2"]
+size = Vector2(41.9998, 40.5882)
+
+[node name="Level1" type="Node2D"]
+
+[node name="Pisos" type="Node2D" parent="."]
+
+[node name="Puente_piso2" parent="Pisos" instance=ExtResource("5_77x7w")]
+position = Vector2(253, 419)
+
+[node name="Puente_piso" parent="Pisos" instance=ExtResource("5_77x7w")]
+position = Vector2(1328, 688)
+rotation = -0.0349066
+
+[node name="cloud_platform" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(896, 512)
+
+[node name="cloud_platform2" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(1032, 616)
+
+[node name="Puente_piso3" parent="Pisos" instance=ExtResource("5_77x7w")]
+position = Vector2(2008, 672)
+
+[node name="Torre" parent="Pisos" instance=ExtResource("8_f4pg2")]
+position = Vector2(63, 239.5)
+
+[node name="StaticBody2D2" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1880, -280)
+rotation = -0.20944
+
+[node name="StaticBody2D3" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1600, 400)
+rotation = 0.20944
+
+[node name="StaticBody2D4" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1896, 272)
+rotation = -0.20944
+
+[node name="StaticBody2D5" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1600, -144)
+rotation = 0.20944
+
+[node name="StaticBody2D6" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1888, -840)
+rotation = -0.20944
+
+[node name="StaticBody2D7" parent="Pisos" instance=ExtResource("16_k2bse")]
+position = Vector2(1608, -696)
+rotation = 0.20944
+
+[node name="cloud_platform3" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(1592, 336)
+
+[node name="cloud_platform4" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(2552, 64)
+
+[node name="cloud_platform5" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(1576, -216)
+
+[node name="cloud_platform7" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(1592, -768)
+
+[node name="cloud_platform6" parent="Pisos" instance=ExtResource("4_77x7w")]
+position = Vector2(2544, -496)
+
+[node name="Background" parent="Pisos" instance=ExtResource("16_c7pbv")]
+z_index = -500
+offset_left = -400.0
+offset_top = 48.0
+offset_right = -360.0
+offset_bottom = 88.0
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+position = Vector2(232, 384)
+zoom = Vector2(1.7, 1.7)
+script = ExtResource("5_rfktq")
+object_to_follow = NodePath("../Personajes/PJAnimado")
+
+[node name="Objetivo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2423.12, -967.01)
+rotation = -0.153547
+scale = Vector2(1.5, 1.57)
+texture = ExtResource("6_62b6n")
+
+[node name="TileCloud" type="Sprite2D" parent="Objetivo"]
+texture_filter = 1
+position = Vector2(2.25644, -3.32387)
+rotation = 0.50091
+scale = Vector2(0.133721, 0.096)
+skew = 0.0137914
+texture = ExtResource("7_rs4xw")
+
+[node name="Area2D" type="Area2D" parent="Objetivo"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objetivo/Area2D"]
+position = Vector2(-0.000245094, -2.86102e-06)
+shape = SubResource("RectangleShape2D_f4pg2")
+
+[node name="Personajes" type="Node2D" parent="."]
+
+[node name="PJAnimado" parent="Personajes" instance=ExtResource("6_f4pg2")]
+position = Vector2(224, 384)
+scale = Vector2(3, 3)
+
+[node name="JefePrueba" parent="Personajes" instance=ExtResource("5_syshm")]
+position = Vector2(2590.24, -990.02)
+rotation = -0.16655
+
+[node name="Player_UI" parent="." instance=ExtResource("9_f4pg2")]
+
+[node name="Dialogos" parent="Player_UI" instance=ExtResource("15_34erp")]
+
+[node name="Level_Logic" type="Node2D" parent="."]
+visible = false
+script = ExtResource("10_62b6n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lk57d")
+volume_db = -30.0
+autoplay = true
+
+[node name="Objetos" type="Node2D" parent="."]
+
+[node name="Barril3" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(1928, -88)
+rotation = -0.216164
+
+[node name="Barril4" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(2096, -344)
+rotation = -0.432327
+
+[node name="Barril5" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(1904, 448)
+rotation = -0.216164
+
+[node name="Barril6" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(2384, 152)
+rotation = -0.216164
+
+[node name="Barril7" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(2040, -616)
+rotation = -0.216164
+
+[node name="Barril8" parent="Objetos" instance=ExtResource("14_2hkqn")]
+position = Vector2(2104, -904)
+rotation = -0.432327
+
+[connection signal="body_entered" from="Objetivo/Area2D" to="Level_Logic" method="_on_area_2d_body_entered"]
+[connection signal="daño_recibido" from="Personajes/PJAnimado" to="Level_Logic" method="_on_pj_animado_daño_recibido"]
+[connection signal="disable" from="Player_UI/Dialogos" to="Level_Logic" method="_on_dialogos_disable"]
+[connection signal="enable" from="Player_UI/Dialogos" to="Level_Logic" method="_on_dialogos_enable"]
+[connection signal="player_health" from="Level_Logic" to="Player_UI" method="_on_level_logic_player_health"]

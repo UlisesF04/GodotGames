@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://p7jxrh4b4gx"]
+
+[ext_resource type="Texture2D" uid="uid://bmwo0jhjdleg6" path="res://Assets/kenney_scribble-platformer/PNG/Default/effect_shotLarge.png" id="1_25c1x"]
+[ext_resource type="Script" uid="uid://crpqarhb1fwa3" path="res://Objetos/bullet.gd" id="1_ui4ul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25c1x"]
+size = Vector2(10, 64)
+
+[node name="bullet" type="Area2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_ui4ul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, -64)
+rotation = 1.5708
+scale = Vector2(1.00617, 1.00905)
+texture = ExtResource("1_25c1x")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_25c1x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
