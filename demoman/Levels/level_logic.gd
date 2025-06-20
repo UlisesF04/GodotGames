@@ -3,12 +3,13 @@ extends Node2D
 @onready var player_ui: CanvasLayer = $"../Player_UI"
 @export var player_life=3
 
-const EscenaVictoria="res://UI/victory_royale.tscn"
+const NextLevel="res://Levels/level_2.tscn"
 const EscenaDerrota="res://UI/game_over.tscn"
 
 signal player_health(new_player_health)
 var dialogo = [
-	"A la derecha hay un enemigo tirando barriles y a su lado hay una moneda",
+	"Buenas",
+	"A la derecha, subiendo las plataformas, hay un enemigo tirando barriles y a su lado hay una moneda",
 	"Esquiva los barriles que te tira, si agarras la moneda ganas",
 	"Tenes tres vidas, si te pega un barril perdes una",
 	"Suerte."
@@ -28,7 +29,7 @@ func game_over():
 		get_tree().change_scene_to_file(EscenaDerrota)
 
 func victory():
-	get_tree().change_scene_to_file(EscenaVictoria)
+	get_tree().change_scene_to_file(NextLevel)
 
 func _on_pj_animado_daño_recibido() -> void:
 		life_less()

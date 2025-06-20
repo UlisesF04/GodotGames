@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://ek4wk6xba15u"]
+[gd_scene load_steps=11 format=3 uid="uid://ek4wk6xba15u"]
 
 [ext_resource type="Texture2D" uid="uid://ck5lcvqkv3hfd" path="res://Assets/BG_DesertMountains/backyback.jpeg" id="1_dgq3b"]
 [ext_resource type="PackedScene" uid="uid://bxp5k5hrf8yhb" path="res://Ambientes/cobertura.tscn" id="1_kbe2v"]
 [ext_resource type="PackedScene" uid="uid://c0bwm30hmy0j2" path="res://Ambientes/límites.tscn" id="2_arsda"]
 [ext_resource type="PackedScene" uid="uid://7cvbc8enflwi" path="res://Personaje/space_shooter.tscn" id="2_kbe2v"]
 [ext_resource type="PackedScene" uid="uid://b8st208bgnx67" path="res://Personaje/ufos.tscn" id="5_bcgyv"]
+[ext_resource type="Script" uid="uid://8q5mxqt1avcx" path="res://Levels/logic_lvl_2.gd" id="6_fbld2"]
+[ext_resource type="PackedScene" uid="uid://f1jiurkg7yb2" path="res://Levels/hud_space_type.tscn" id="6_s275v"]
+[ext_resource type="AudioStream" uid="uid://6bomd426fhlu" path="res://Music/Major Burrows - Super Mario Galaxy.mp3" id="8_pml6m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcgyv"]
+size = Vector2(18, 816)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbld2"]
+size = Vector2(14.5, 816)
 
 [node name="Level2" type="Node2D"]
 
@@ -33,14 +42,43 @@ scale = Vector2(2.5, 2.5)
 [node name="Personajes" type="Node2D" parent="."]
 
 [node name="UFOs" parent="Personajes" instance=ExtResource("5_bcgyv")]
-position = Vector2(1424, 264)
-
-[node name="UFOs2" parent="Personajes" instance=ExtResource("5_bcgyv")]
-position = Vector2(480, 264)
+position = Vector2(960, 448)
 
 [node name="SpaceShooter" parent="Personajes" instance=ExtResource("2_kbe2v")]
 position = Vector2(1000, 1000)
 scale = Vector2(1.6, 1.6)
 
-[node name="LogicaAPelo" type="Node2D" parent="."]
+[node name="Limites" type="Node2D" parent="."]
+
+[node name="Izquierda" type="Area2D" parent="Limites"]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Izquierda"]
+position = Vector2(-1, 416)
+shape = SubResource("RectangleShape2D_bcgyv")
+
+[node name="Derecha" type="Area2D" parent="Limites"]
+collision_layer = 8
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Derecha"]
+position = Vector2(1920.75, 416)
+shape = SubResource("RectangleShape2D_fbld2")
+
+[node name="HUD-SpaceType" parent="." instance=ExtResource("6_s275v")]
+
+[node name="LogicLvl2" type="Node2D" parent="."]
 visible = false
+script = ExtResource("6_fbld2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pml6m")
+volume_db = -15.0
+
+[connection signal="total_score" from="Personajes/UFOs" to="LogicLvl2" method="_on_uf_os_total_score"]
+[connection signal="damaged" from="Personajes/SpaceShooter" to="LogicLvl2" method="_on_space_shooter_damaged"]
+[connection signal="body_entered" from="Limites/Izquierda" to="LogicLvl2" method="_on_izquierda_body_entered"]
+[connection signal="body_entered" from="Limites/Derecha" to="LogicLvl2" method="_on_derecha_body_entered"]
+[connection signal="life_counter" from="LogicLvl2" to="HUD-SpaceType" method="_on_logic_lvl_2_life_counter"]
+[connection signal="scores" from="LogicLvl2" to="HUD-SpaceType" method="_on_logic_lvl_2_scores"]

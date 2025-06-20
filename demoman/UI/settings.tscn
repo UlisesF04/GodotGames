@@ -100,9 +100,8 @@ theme_override_colors/font_shadow_color = Color(0.00251271, 0.135233, 0.628602, 
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
 theme_override_fonts/font = ExtResource("3_hnc8t")
-theme_override_font_sizes/font_size = 50
-text = "-Opciones-
-Manejate con lo que hay"
+theme_override_font_sizes/font_size = 70
+text = "-Opciones-"
 horizontal_alignment = 1
 vertical_alignment = 1
 

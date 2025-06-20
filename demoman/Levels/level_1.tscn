@@ -135,11 +135,6 @@ rotation = -0.16655
 visible = false
 script = ExtResource("10_62b6n")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_lk57d")
-volume_db = -30.0
-autoplay = true
-
 [node name="Objetos" type="Node2D" parent="."]
 
 [node name="Barril3" parent="Objetos" instance=ExtResource("14_2hkqn")]
@@ -165,6 +160,11 @@ rotation = -0.216164
 [node name="Barril8" parent="Objetos" instance=ExtResource("14_2hkqn")]
 position = Vector2(2104, -904)
 rotation = -0.432327
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lk57d")
+volume_db = -30.0
+autoplay = true
 
 [connection signal="body_entered" from="Objetivo/Area2D" to="Level_Logic" method="_on_area_2d_body_entered"]
 [connection signal="daño_recibido" from="Personajes/PJAnimado" to="Level_Logic" method="_on_pj_animado_daño_recibido"]

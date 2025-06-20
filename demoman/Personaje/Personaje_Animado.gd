@@ -41,5 +41,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	
 	
 func damage_taken():
-	print("Recibiste daño")
 	daño_recibido.emit()

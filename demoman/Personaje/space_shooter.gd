@@ -25,5 +25,5 @@ func shooting():
 	bulletinstance.position=$Sprite2D/Manito/ItemBlaster.global_position
 	get_tree().current_scene.add_child(bulletinstance)
 	
-func taken_damage():
+func take_damage():
 	damaged.emit()

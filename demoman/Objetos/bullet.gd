@@ -7,5 +7,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node) -> void:
 	queue_free()
-	if body.name == "ufo1" or "ufo2" or "ufo3" or "ufo4" or "ufo5":
-		print("sexo")
+	if body.name.begins_with("ufo"):
+		var grupo = body.get_parent()
+		if grupo and grupo.has_method("puntaje"):
+			grupo.puntaje()
+		body.queue_free()

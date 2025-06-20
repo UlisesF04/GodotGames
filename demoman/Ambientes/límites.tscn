@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0bwm30hmy0j2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_o2tbk"]
+a = Vector2(0, 896)
 b = Vector2(0, 1080)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_eng83"]
@@ -10,7 +11,7 @@ b = Vector2(1920, 0)
 b = Vector2(-1920, 0)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xyk5f"]
-a = Vector2(0, -1080)
+a = Vector2(0, -184)
 b = Vector2(0, 0)
 
 [node name="Límites" type="StaticBody2D"]

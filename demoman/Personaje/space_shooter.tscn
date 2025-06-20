@@ -10,7 +10,7 @@ size = Vector2(40, 64)
 
 [sub_resource type="Animation" id="Animation_s1uxs"]
 resource_name = "Disparar"
-length = 0.35
+length = 0.5
 loop_mode = 1
 tracks/0/type = "method"
 tracks/0/imported = false
@@ -19,7 +19,7 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0.266667),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -33,10 +33,10 @@ tracks/1/path = NodePath("Sprite2D/Manito:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.00608215, 0.199951, 0.344402),
+"times": PackedFloat32Array(0, 0.266667, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(48, -24), Vector2(48, -16), Vector2(48, -24)]
+"values": [Vector2(8, -24), Vector2(8, -16), Vector2(8, -24)]
 }
 
 [sub_resource type="Animation" id="Animation_mwo4k"]
@@ -51,7 +51,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(48, -24)]
+"values": [Vector2(8, -24)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ojqvk"]
@@ -71,7 +71,7 @@ texture = ExtResource("1_irqv6")
 
 [node name="Manito" type="Sprite2D" parent="Sprite2D"]
 texture_filter = 1
-position = Vector2(48, -24)
+position = Vector2(8, -24)
 texture = ExtResource("2_s1uxs")
 
 [node name="ItemBlaster" type="Sprite2D" parent="Sprite2D/Manito"]

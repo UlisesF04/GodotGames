@@ -1,103 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8st208bgnx67"]
+[gd_scene load_steps=3 format=3 uid="uid://b8st208bgnx67"]
 
-[ext_resource type="Texture2D" uid="uid://k24o6ohnqgm5" path="res://Assets/kenney_alien-ufo-pack/PNG/shipBlue_manned.png" id="1_0uayb"]
-[ext_resource type="Script" uid="uid://siok2lba6dv7" path="res://Personaje/ufos.gd" id="1_ftgf7"]
-[ext_resource type="Texture2D" uid="uid://brqss5mk5oslq" path="res://Assets/kenney_alien-ufo-pack/PNG/shipPink_manned.png" id="2_ftgf7"]
-[ext_resource type="Texture2D" uid="uid://c35itr5a0gufj" path="res://Assets/kenney_alien-ufo-pack/PNG/shipYellow_manned.png" id="3_2kwpi"]
-[ext_resource type="Texture2D" uid="uid://b1d8b5h85l1c7" path="res://Assets/kenney_alien-ufo-pack/PNG/shipBeige_manned.png" id="4_l0m03"]
-[ext_resource type="Texture2D" uid="uid://7hkjsn621yp2" path="res://Assets/kenney_alien-ufo-pack/PNG/shipGreen_manned.png" id="5_lbvqp"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_haejx"]
-radius = 24.0
-height = 128.0
+[ext_resource type="Script" uid="uid://cqbn88tttdwmk" path="res://Personaje/ufos.gd" id="1_ftgf7"]
+[ext_resource type="PackedScene" uid="uid://bvgav5q2y8jbw" path="res://Personaje/grupos.tscn" id="7_2kwpi"]
 
 [node name="UFOs" type="Node2D"]
 script = ExtResource("1_ftgf7")
 
-[node name="ufo1" type="CharacterBody2D" parent="."]
-collision_layer = 2
-collision_mask = 5
+[node name="Grupos" parent="." instance=ExtResource("7_2kwpi")]
 
-[node name="Sprite2D" type="Sprite2D" parent="ufo1"]
-texture_filter = 1
-texture = ExtResource("1_0uayb")
+[node name="Grupos2" parent="." instance=ExtResource("7_2kwpi")]
+position = Vector2(-128, -128)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ufo1"]
-position = Vector2(0, 8)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_haejx")
+[node name="Grupos3" parent="." instance=ExtResource("7_2kwpi")]
+position = Vector2(-64, -256)
 
-[node name="Marker2D" type="Marker2D" parent="ufo1"]
-position = Vector2(0, 48)
+[node name="Grupos4" parent="." instance=ExtResource("7_2kwpi")]
+position = Vector2(-192, -384)
 
-[node name="ufo2" type="CharacterBody2D" parent="."]
-position = Vector2(-192, 0)
-collision_layer = 2
-collision_mask = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="ufo2"]
-texture_filter = 1
-position = Vector2(0, -8)
-texture = ExtResource("2_ftgf7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ufo2"]
-position = Vector2(0, 8)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_haejx")
-
-[node name="Marker2D" type="Marker2D" parent="ufo2"]
-position = Vector2(0, 48)
-
-[node name="ufo3" type="CharacterBody2D" parent="."]
-position = Vector2(192, 0)
-collision_layer = 2
-collision_mask = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="ufo3"]
-texture_filter = 1
-position = Vector2(0, -8)
-texture = ExtResource("3_2kwpi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ufo3"]
-position = Vector2(0, 8)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_haejx")
-
-[node name="Marker2D" type="Marker2D" parent="ufo3"]
-position = Vector2(0, 48)
-
-[node name="ufo4" type="CharacterBody2D" parent="."]
-position = Vector2(-384, 0)
-collision_layer = 2
-collision_mask = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="ufo4"]
-texture_filter = 1
-position = Vector2(0, -8)
-texture = ExtResource("4_l0m03")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ufo4"]
-position = Vector2(0, 8)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_haejx")
-
-[node name="Marker2D" type="Marker2D" parent="ufo4"]
-position = Vector2(0, 48)
-
-[node name="ufo5" type="CharacterBody2D" parent="."]
-position = Vector2(384, 0)
-collision_layer = 2
-collision_mask = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="ufo5"]
-texture_filter = 1
-position = Vector2(0, -8)
-texture = ExtResource("5_lbvqp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ufo5"]
-position = Vector2(0, 8)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_haejx")
-
-[node name="Marker2D" type="Marker2D" parent="ufo5"]
-position = Vector2(0, 48)
+[connection signal="punt_total" from="Grupos" to="." method="_on_grupos_punt_total"]
+[connection signal="punt_total" from="Grupos2" to="." method="_on_grupos_2_punt_total"]
+[connection signal="punt_total" from="Grupos3" to="." method="_on_grupos_3_punt_total"]
+[connection signal="punt_total" from="Grupos4" to="." method="_on_grupos_4_punt_total"]
