@@ -1,6 +1,5 @@
 [gd_scene load_steps=11 format=3 uid="uid://ek4wk6xba15u"]
 
-[ext_resource type="Texture2D" uid="uid://ck5lcvqkv3hfd" path="res://Assets/BG_DesertMountains/backyback.jpeg" id="1_dgq3b"]
 [ext_resource type="PackedScene" uid="uid://bxp5k5hrf8yhb" path="res://Ambientes/cobertura.tscn" id="1_kbe2v"]
 [ext_resource type="PackedScene" uid="uid://c0bwm30hmy0j2" path="res://Ambientes/límites.tscn" id="2_arsda"]
 [ext_resource type="PackedScene" uid="uid://7cvbc8enflwi" path="res://Personaje/space_shooter.tscn" id="2_kbe2v"]
@@ -8,6 +7,7 @@
 [ext_resource type="Script" uid="uid://8q5mxqt1avcx" path="res://Levels/logic_lvl_2.gd" id="6_fbld2"]
 [ext_resource type="PackedScene" uid="uid://f1jiurkg7yb2" path="res://Levels/hud_space_type.tscn" id="6_s275v"]
 [ext_resource type="AudioStream" uid="uid://6bomd426fhlu" path="res://Music/Major Burrows - Super Mario Galaxy.mp3" id="8_pml6m"]
+[ext_resource type="Texture2D" uid="uid://bu8vr26k8jprw" path="res://Assets/BG_DesertMountains/back2.png" id="8_vltsr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcgyv"]
 size = Vector2(18, 816)
@@ -17,11 +17,11 @@ size = Vector2(14.5, 816)
 
 [node name="Level2" type="Node2D"]
 
-[node name="Backyback" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(960, 540)
-scale = Vector2(1.92, 1.9115)
-texture = ExtResource("1_dgq3b")
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -640
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_vltsr")
 
 [node name="Plataformas" type="Node2D" parent="."]
 
@@ -75,6 +75,7 @@ script = ExtResource("6_fbld2")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_pml6m")
 volume_db = -15.0
+autoplay = true
 
 [connection signal="total_score" from="Personajes/UFOs" to="LogicLvl2" method="_on_uf_os_total_score"]
 [connection signal="damaged" from="Personajes/SpaceShooter" to="LogicLvl2" method="_on_space_shooter_damaged"]

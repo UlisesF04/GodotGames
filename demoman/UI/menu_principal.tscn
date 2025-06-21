@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4o81j1i13igq"]
 
-[ext_resource type="Texture2D" uid="uid://bajkhkvd502xx" path="res://Assets/BG_DesertMountains/fondiu.jpg" id="1_mb63o"]
 [ext_resource type="Script" uid="uid://b6m0nr4nhdfmf" path="res://UI/menu_principal.gd" id="1_x51cq"]
+[ext_resource type="Texture2D" uid="uid://bbo08cxssbtpi" path="res://Assets/BG_DesertMountains/back1.png" id="2_84xku"]
 [ext_resource type="Texture2D" uid="uid://2cc5bw57blfi" path="res://Assets/kenney_ui-pack-rpg-expansion/PNG/buttonLong_beige.png" id="3_84xku"]
-[ext_resource type="FontFile" uid="uid://ckjnwdyjcuv2b" path="res://Fonts/PressStart2P-Regular.ttf" id="3_gtjvn"]
 [ext_resource type="PackedScene" uid="uid://cg4q604cs3ssn" path="res://Elementos Varios/Título.tscn" id="4_1uu8i"]
+[ext_resource type="FontFile" uid="uid://cbgx1k4s8bx56" path="res://Fonts/Righteous-Regular.ttf" id="4_84xku"]
 [ext_resource type="AudioStream" uid="uid://cu36dlelmoj0q" path="res://Music/Apotos (Day) - Sonic Unleashed [OST].mp3" id="4_gtjvn"]
 
 [node name="Menu_Principal" type="Control"]
@@ -26,7 +26,7 @@ offset_top = -8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_mb63o")
+texture = ExtResource("2_84xku")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
 z_index = 10
@@ -54,14 +54,17 @@ texture = ExtResource("3_84xku")
 
 [node name="play" type="Button" parent="TextureRect/VBoxContainer/TextureRect"]
 z_index = 15
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -4.66667
+offset_bottom = 5.33333
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_gtjvn")
+theme_override_fonts/font = ExtResource("4_84xku")
 theme_override_font_sizes/font_size = 40
 text = "PLAY"
 flat = true
@@ -70,7 +73,8 @@ flat = true
 layout_mode = 2
 texture = ExtResource("3_84xku")
 
-[node name="settings" type="Button" parent="TextureRect/VBoxContainer/TextureRect2"]
+[node name="levelSelect" type="Button" parent="TextureRect/VBoxContainer/TextureRect2"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,16 +82,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_gtjvn")
+theme_override_fonts/font = ExtResource("4_84xku")
 theme_override_font_sizes/font_size = 40
-text = "SETTINGS"
+text = "SELECT LEVEL"
 flat = true
 
 [node name="TextureRect3" type="TextureRect" parent="TextureRect/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_84xku")
 
-[node name="quit" type="Button" parent="TextureRect/VBoxContainer/TextureRect3"]
+[node name="settings" type="Button" parent="TextureRect/VBoxContainer/TextureRect3"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -95,7 +100,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_gtjvn")
+theme_override_fonts/font = ExtResource("4_84xku")
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+flat = true
+
+[node name="TextureRect4" type="TextureRect" parent="TextureRect/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_84xku")
+
+[node name="quit" type="Button" parent="TextureRect/VBoxContainer/TextureRect4"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_84xku")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 flat = true
@@ -107,24 +130,24 @@ offset_top = 8.0
 offset_bottom = -696.0
 
 [node name="título" type="Label" parent="TextureRect/Títulos"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -576.0
-offset_top = 136.0
+offset_top = 128.0
 offset_right = 576.0
-offset_bottom = 313.0
+offset_bottom = 312.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.754318, 0.033367, 0.200589, 1)
 theme_override_colors/font_shadow_color = Color(0.409125, 0.11163, 0.0894664, 1)
 theme_override_constants/paragraph_spacing = -20
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = ExtResource("3_gtjvn")
+theme_override_fonts/font = ExtResource("4_84xku")
 theme_override_font_sizes/font_size = 70
 text = "RORO'S JOURNEY
-
 -DEMO EDITION-"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -136,5 +159,6 @@ volume_db = -30.0
 autoplay = true
 
 [connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect/play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect2/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect3/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect2/levelSelect" to="." method="_on_level_select_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect3/settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/TextureRect4/quit" to="." method="_on_quit_pressed"]

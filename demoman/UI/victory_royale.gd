@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 const LEVEL_1 = "res://Levels/level_1.tscn"
-var Creditos = "res://UI/creditos.tscn"
+var MENU = "res://UI/menu_principal.tscn"
 
 func _ready():
 	VolumeManager.music_player = $AudioStreamPlayer
@@ -13,4 +13,4 @@ func _on_button_button_down() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file(Creditos)
+	get_tree().change_scene_to_file(MENU)
